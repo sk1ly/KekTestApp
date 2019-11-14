@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">First App</string>
+    <string name="app_name_rus">Приложение #1</string>
+    <string name="authorize_button_text">Авторизоваться</string>
+    <string name="default_first_user_name">Неизвестный</string>
+    <string name="default_second_user_name">пользователь</string>
+    <string name="inputFirstUserName">Имя</string>
+    <string name="inputSecondUserName">Фамилия</string>
+    <string name="complete_authorize_button_text">Готово</string>
+</resources>
