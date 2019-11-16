@@ -15,7 +15,7 @@
         android:layout_marginTop="104dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/inputFirstUserName"
+        android:hint="@string/inputFirstUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginTop="169dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/inputSecondUserName"
+        android:hint="@string/inputSecondUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

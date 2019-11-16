@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="ru.sk1ly.firstapp.MainActivity">
+        <activity
+            android:name="ru.sk1ly.firstapp.MainActivity"
+            android:label="@string/activity_main_label">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ru.sk1ly.firstapp.AuthorizeActivity" />
+        <activity
+            android:name="ru.sk1ly.firstapp.AuthorizeActivity"
+            android:label="@string/activity_authorize_label"/>
     </application>
 
 </manifest>

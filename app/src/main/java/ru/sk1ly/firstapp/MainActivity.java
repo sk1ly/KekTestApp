@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickAuthorizeButton(View view) {
-//        TODO Не работает, разобраться
         Intent authorizeIntent = new Intent(MainActivity.this, AuthorizeActivity.class);
         startActivityForResult(authorizeIntent, AUTHORIZE_USER);
     }
