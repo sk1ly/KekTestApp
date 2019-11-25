@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">First App</string>
     <string name="app_name_rus">Приложение #1</string>
+    <string name="activity_main_label">Главное меню</string>
+    <string name="activity_authorize_label">Авторизация</string>
     <string name="authorize_button_text">Авторизоваться</string>
     <string name="hello_before_user_name">Здравствуй,</string>
     <string name="default_first_user_name">Неизвестный</string>
     <string name="default_second_user_name">пользователь</string>
-    <string name="inputFirstUserName">Имя</string>
-    <string name="inputSecondUserName">Фамилия</string>
+    <string name="inputFirstUserName">Ваше имя</string>
+    <string name="inputSecondUserName">Ваша фамилия</string>
     <string name="complete_authorize_button_text">Готово</string>
 </resources>
