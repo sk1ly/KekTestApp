@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mUserFirstName = findViewById(R.id.userFirstName);
-        mUserSecondName = findViewById(R.id.userSecondName);
+        mUserFirstName = findViewById(R.id.user_first_name);
+        mUserSecondName = findViewById(R.id.user_second_name);
 
         if (savedInstanceState != null) {
             mUserFirstName.setText(savedInstanceState.getCharSequence(Keys.USER_FIRST_NAME));
@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickAboutAppButton(View view) {
-        //        TODO
-        Toast.makeText(this, "TODO", Toast.LENGTH_SHORT).show();
+        Intent aboutAppIntent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(aboutAppIntent);
     }
 
     private void makeOrientationToastText(String orientationType) {

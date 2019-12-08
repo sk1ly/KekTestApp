@@ -20,8 +20,8 @@ public class AuthorizeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorize);
-        mUserFirstName = findViewById(R.id.inputFirstUserName);
-        mUserSecondName = findViewById(R.id.inputSecondUserName);
+        mUserFirstName = findViewById(R.id.input_first_user_name);
+        mUserSecondName = findViewById(R.id.input_second_user_name);
     }
 
     public void onClickAuthorizeCompleteButton(View view) {
