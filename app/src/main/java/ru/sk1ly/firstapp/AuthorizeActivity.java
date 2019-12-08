@@ -4,14 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AuthorizeActivity extends AppCompatActivity {
+import static ru.sk1ly.firstapp.Constants.*;
 
-    public static final String USER_FIRST_NAME_KEY = "ru.sk1ly.firstapp.USER_FIRST_NAME";
-    public static final String USER_SECOND_NAME_KEY = "ru.sk1ly.firstapp.USER_SECOND_NAME";
+public class AuthorizeActivity extends AppCompatActivity {
 
     public EditText mUserFirstName;
     public EditText mUserSecondName;
@@ -26,9 +26,16 @@ public class AuthorizeActivity extends AppCompatActivity {
 
     public void onClickAuthorizeCompleteButton(View view) {
         Intent answerIntent = new Intent();
-        answerIntent.putExtra(USER_FIRST_NAME_KEY, mUserFirstName.getText().toString());
-        answerIntent.putExtra(USER_SECOND_NAME_KEY, mUserSecondName.getText().toString());
-        setResult(RESULT_OK, answerIntent);
+        if (mUserFirstName.getText().toString().isEmpty() ||
+                mUserSecondName.getText().toString().isEmpty()) {
+            Toast.makeText(this,
+                    "Необходимо заполнить два поля! Вы не были авторизованы", Toast.LENGTH_LONG).show();
+            setResult(RESULT_CANCELED, answerIntent);
+        } else {
+            answerIntent.putExtra(Keys.USER_FIRST_NAME_ANSWER, mUserFirstName.getText().toString());
+            answerIntent.putExtra(Keys.USER_SECOND_NAME_ANSWER, mUserSecondName.getText().toString());
+            setResult(RESULT_OK, answerIntent);
+        }
         finish();
     }
 

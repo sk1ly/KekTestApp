@@ -10,8 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import static ru.sk1ly.firstapp.AuthorizeActivity.USER_FIRST_NAME_KEY;
-import static ru.sk1ly.firstapp.AuthorizeActivity.USER_SECOND_NAME_KEY;
+import static ru.sk1ly.firstapp.Constants.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mUserFirstName = findViewById(R.id.userFirstName);
         mUserSecondName = findViewById(R.id.userSecondName);
+
+        if (savedInstanceState != null) {
+            mUserFirstName.setText(savedInstanceState.getCharSequence(Keys.USER_FIRST_NAME));
+            mUserSecondName.setText(savedInstanceState.getCharSequence(Keys.USER_SECOND_NAME));
+        }
     }
 
     @Override
@@ -37,10 +41,17 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == AUTHORIZE_USER && resultCode == RESULT_OK) {
-//            TODO Проверки на null
-            mUserFirstName.setText(data.getStringExtra(USER_FIRST_NAME_KEY));
-            mUserSecondName.setText(data.getStringExtra(USER_SECOND_NAME_KEY));
-        }
+            mUserFirstName.setText(data.getStringExtra(Keys.USER_FIRST_NAME_ANSWER));
+            mUserSecondName.setText(data.getStringExtra(Keys.USER_SECOND_NAME_ANSWER));
+        }  // TODO AUTHORIZE CODE? И правильно ли использовать RESULT_CODE CANCELED?
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putCharSequence(Keys.USER_FIRST_NAME, mUserFirstName.getText());
+        outState.putCharSequence(Keys.USER_SECOND_NAME, mUserSecondName.getText());
     }
 
     public void onClickAuthorizeButton(View view) {
