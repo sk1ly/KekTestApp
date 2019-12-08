@@ -9,11 +9,21 @@
     tools:context="ru.sk1ly.firstapp.MainActivity">
 
     <TextView
+        android:id="@+id/userSecondName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/default_second_user_name"
+        app:layout_constraintStart_toEndOf="@+id/userFirstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="60dp"
         android:text="@string/hello_before_user_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,40 +32,19 @@
         android:id="@+id/userFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:text="@string/default_first_user_name"
         app:layout_constraintStart_toEndOf="@+id/hello"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/userSecondName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="56dp"
-        android:text="@string/default_second_user_name"
-        app:layout_constraintStart_toEndOf="@+id/userFirstName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="28dp"
         android:text="@string/app_name_rus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/authorize_button"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="104dp"
-        android:onClick="onClickAuthorizeButton"
-        android:text="@string/authorize_button_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,30 +52,43 @@
         android:id="@+id/say_kek_button"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
         android:onClick="onClickSayKekButton"
         android:text="@string/say_kek_button_text"
+        app:layout_constraintStart_toEndOf="@+id/authorize_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/authorize_button"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="96dp"
+        android:onClick="onClickAuthorizeButton"
+        android:text="@string/authorize_button_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authorize_button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/get_orientation_button"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="208dp"
         android:onClick="onClickGetOrientationButton"
         android:text="@string/get_orientation_button_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/say_kek_button" />
+        app:layout_constraintTop_toBottomOf="@+id/authorize_button" />
 
     <Button
         android:id="@+id/about_app_button"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="144dp"
         android:onClick="onClickAboutAppButton"
         android:text="@string/about_app_button_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/get_orientation_button" />
+        app:layout_constraintStart_toEndOf="@+id/get_orientation_button"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
