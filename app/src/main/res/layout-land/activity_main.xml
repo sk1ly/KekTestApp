@@ -9,13 +9,13 @@
     tools:context="ru.sk1ly.firstapp.MainActivity">
 
     <TextView
-        android:id="@+id/userSecondName"
+        android:id="@+id/user_second_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="60dp"
         android:text="@string/default_second_user_name"
-        app:layout_constraintStart_toEndOf="@+id/userFirstName"
+        app:layout_constraintStart_toEndOf="@+id/user_first_name"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/userFirstName"
+        android:id="@+id/user_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="340dp"
