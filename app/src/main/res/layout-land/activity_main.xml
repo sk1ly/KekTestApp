@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -9,76 +8,71 @@
     tools:context="ru.sk1ly.firstapp.MainActivity">
 
     <TextView
-        android:id="@+id/user_second_name"
+        android:id="@+id/app_name_rus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/default_second_user_name"
-        app:layout_constraintStart_toEndOf="@+id/user_first_name"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name_rus" />
 
-    <TextView
-        android:id="@+id/hello"
+    <LinearLayout
+        android:id="@+id/text_views_on_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/hello_before_user_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/app_name_rus"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/user_first_name"
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/hello_before_user_name" />
+
+        <TextView
+            android:id="@+id/user_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/default_first_user_name" />
+
+        <TextView
+            android:id="@+id/user_second_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_second_user_name" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/default_first_user_name"
-        app:layout_constraintStart_toEndOf="@+id/hello"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/text_views_on_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/app_name_rus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!-- TODO Сделать две колонки, при появляении новых кнопок -->
 
-    <Button
-        android:id="@+id/say_kek_button"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="96dp"
-        android:onClick="onClickSayKekButton"
-        android:text="@string/say_kek_button_text"
-        app:layout_constraintStart_toEndOf="@+id/authorize_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/authorize_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickAuthorizeButton"
+            android:text="@string/authorize_button_text" />
 
-    <Button
-        android:id="@+id/authorize_button"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="96dp"
-        android:onClick="onClickAuthorizeButton"
-        android:text="@string/authorize_button_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/say_kek_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickSayKekButton"
+            android:text="@string/say_kek_button_text" />
 
-    <Button
-        android:id="@+id/get_orientation_button"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="208dp"
-        android:onClick="onClickGetOrientationButton"
-        android:text="@string/get_orientation_button_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authorize_button" />
+        <Button
+            android:id="@+id/get_orientation_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickGetOrientationButton"
+            android:text="@string/get_orientation_button_text" />
+    </LinearLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
