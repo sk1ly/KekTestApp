@@ -3,9 +3,12 @@ package ru.sk1ly.firstapp;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -82,7 +85,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSayKekButton(View view) {
-        Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_LONG).show();
+    }
+
+    public void onClickSayKekWithRicardoButton(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        LinearLayout toastContainer = (LinearLayout) toast.getView();
+        toastContainer.setOrientation(LinearLayout.HORIZONTAL);
+//        TODO Понять, почему Toast слишком большой. Возможно, не нужна горизонтальная ориентация
+        ImageView ricardoImageView = new ImageView(getApplicationContext());
+        ricardoImageView.setImageResource(R.drawable.ricardo);
+        toastContainer.addView(ricardoImageView, 1);
+        toast.show();
     }
 
     public void onClickGetOrientationButton(View view) {

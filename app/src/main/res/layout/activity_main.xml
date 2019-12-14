@@ -66,6 +66,13 @@
             android:text="@string/say_kek_button_text" />
 
         <Button
+            android:id="@+id/say_kek_with_ricardo_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickSayKekWithRicardoButton"
+            android:text="@string/say_kek_with_ricardo_button_text" />
+
+        <Button
             android:id="@+id/get_orientation_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
