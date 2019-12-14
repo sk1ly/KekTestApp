@@ -3,6 +3,8 @@ package ru.sk1ly.firstapp;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +39,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public void onAuthorizeMenuClick(MenuItem item) {
+        Toast.makeText(getApplicationContext(), "Скоро тут будет авторизация!", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void onSettingsMenuClick(MenuItem item) {
+        Toast.makeText(getApplicationContext(), "Скоро тут будут настройки!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onAboutAppMenuClick(MenuItem item) {
+        Intent aboutAppIntent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(aboutAppIntent);
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -60,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSayKekButton(View view) {
-        Toast.makeText(this, KEK_WORD, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_SHORT).show();
     }
 
     public void onClickGetOrientationButton(View view) {
@@ -74,12 +96,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClickAboutAppButton(View view) {
-        Intent aboutAppIntent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(aboutAppIntent);
-    }
-
     private void makeOrientationToastText(String orientationType) {
-        Toast.makeText(this, "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
     }
 }

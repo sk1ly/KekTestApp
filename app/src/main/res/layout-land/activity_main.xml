@@ -80,15 +80,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/authorize_button" />
 
-    <Button
-        android:id="@+id/about_app_button"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="144dp"
-        android:onClick="onClickAboutAppButton"
-        android:text="@string/about_app_button_text"
-        app:layout_constraintStart_toEndOf="@+id/get_orientation_button"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
