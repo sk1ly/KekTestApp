@@ -111,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onClickWorkWithDisplayButton(View view) {
+        Intent workWithDisplayIntent = new Intent(MainActivity.this, WorkWithDisplayActivity.class);
+        startActivity(workWithDisplayIntent);
+    }
+
     private void makeOrientationToastText(String orientationType) {
         Toast.makeText(getApplicationContext(), "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
     }

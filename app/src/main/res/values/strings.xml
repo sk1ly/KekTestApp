@@ -4,10 +4,12 @@
     <string name="activity_main_label">Главное меню</string>
     <string name="activity_authorize_label">Авторизация</string>
     <string name="activity_about_label">О приложении</string>
+    <string name="activity_work_with_display_label">Работа с экраном</string>
     <string name="authorize_button_text">Авторизоваться</string>
     <string name="say_kek_button_text">Сказать Кек</string>
     <string name="say_kek_with_ricardo_button_text">Сказать Кек и показать Рикардо</string>
     <string name="get_orientation_button_text">Узнать ориентацию</string>
+    <string name="work_with_display_button_text">Поработать с экраном</string>
     <string name="hello_before_user_name">Здравствуй,</string>
     <string name="default_first_user_name">Неизвестный</string>
     <string name="default_second_user_name">пользователь</string>
@@ -18,4 +20,6 @@
     <string name="action_authorize">Авторизоваться</string>
     <string name="action_settings">Настройки</string>
     <string name="action_about_app">О приложении</string>
+    <string name="go_to_system_display_settings_button_text">Настройки экрана смартфона</string>
+    <string name="current_brightness_start_text">Текущая яркость экрана: %1$d</string>
 </resources>

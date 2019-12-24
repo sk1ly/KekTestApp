@@ -78,6 +78,13 @@
             android:layout_height="wrap_content"
             android:onClick="onClickGetOrientationButton"
             android:text="@string/get_orientation_button_text" />
+
+        <Button
+            android:id="@+id/work_with_display_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickWorkWithDisplayButton"
+            android:text="@string/work_with_display_button_text" />
     </LinearLayout>
 
 </RelativeLayout>
