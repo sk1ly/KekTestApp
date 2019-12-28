@@ -6,7 +6,6 @@
 ### x.x.x-x
 - Coming soon...
 
-## Загрузки
-- Версия 0.0.1-1 - <a href="apks/first_app_debug_0.0.1-1.apk" download>скачать</a>
-- Версия 0.0.1-1 - [Скачать](apks/first_app_debug_0.0.1-1.apk)
+## Downloads
+- Версия 0.0.1-1 - <a href="https://github.com/sk1ly/first_app/raw/master/apks/first_app_debug_0.0.1-1.apk" download>скачать</a>
 - Coming soon...
