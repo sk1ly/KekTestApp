@@ -5,8 +5,9 @@
 
     <TextView
         android:id="@+id/about_app_text"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/about_app_text" />
+        android:layout_height="wrap_content" />
 
 </ScrollView>

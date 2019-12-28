@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.activity_main_label);
         mUserFirstName = findViewById(R.id.user_first_name);
         mUserSecondName = findViewById(R.id.user_second_name);
 

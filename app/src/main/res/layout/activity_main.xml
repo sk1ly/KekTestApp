@@ -85,6 +85,7 @@
             android:layout_height="wrap_content"
             android:onClick="onClickWorkWithDisplayButton"
             android:text="@string/work_with_display_button_text" />
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -43,8 +43,6 @@
             android:text="@string/default_second_user_name" />
     </LinearLayout>
 
-<!-- TODO Сделать две колонки кнопок -->
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,6 +50,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
+
+    <!-- TODO Сделать две колонки кнопок -->
 
         <Button
             android:id="@+id/authorize_button"
@@ -80,6 +80,14 @@
             android:layout_height="wrap_content"
             android:onClick="onClickGetOrientationButton"
             android:text="@string/get_orientation_button_text" />
+
+        <Button
+            android:id="@+id/work_with_display_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickWorkWithDisplayButton"
+            android:text="@string/work_with_display_button_text" />
+
     </LinearLayout>
 
 </RelativeLayout>

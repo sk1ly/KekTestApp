@@ -16,10 +16,11 @@
     <string name="input_first_user_name">Ваше имя</string>
     <string name="input_second_user_name">Ваша фамилия</string>
     <string name="complete_authorize_button_text">Готово</string>
-    <string name="about_app_text">Версия приложения 0.0.1. По всем вопросам обращаться на <b>io.skvortsov@mail.ru</b></string>
+    <string name="about_app_text">Версия приложения %1$s. По всем вопросам обращаться на <b>io.skvortsov@mail.ru</b></string>
     <string name="action_authorize">Авторизоваться</string>
     <string name="action_settings">Настройки</string>
     <string name="action_about_app">О приложении</string>
     <string name="go_to_system_display_settings_button_text">Настройки экрана смартфона</string>
-    <string name="current_brightness_start_text">Текущая яркость экрана: %1$d</string>
+    <string name="current_brightness_start_text">Текущая яркость экрана: %1$d%%</string>
+    <string name="how_to_change_brightness_note_text">Подсказка: Вы можете изменить яркость текущей активити, просто перетащив ползунок!</string>
 </resources>
