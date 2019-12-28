@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context="ru.sk1ly.firstapp.AuthorizeActivity">
 
+<!-- TODO Зарефачить -->
+
     <EditText
         android:id="@+id/input_first_user_name"
         android:layout_width="wrap_content"

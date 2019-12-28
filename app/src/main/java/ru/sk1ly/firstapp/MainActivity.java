@@ -3,7 +3,12 @@ package ru.sk1ly.firstapp;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.activity_main_label);
         mUserFirstName = findViewById(R.id.user_first_name);
         mUserSecondName = findViewById(R.id.user_second_name);
 
@@ -34,6 +40,26 @@ public class MainActivity extends AppCompatActivity {
             mUserFirstName.setText(savedInstanceState.getCharSequence(Keys.USER_FIRST_NAME));
             mUserSecondName.setText(savedInstanceState.getCharSequence(Keys.USER_SECOND_NAME));
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public void onAuthorizeMenuClick(MenuItem item) {
+        Toast.makeText(getApplicationContext(), "Скоро тут будет авторизация!", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void onSettingsMenuClick(MenuItem item) {
+        Toast.makeText(getApplicationContext(), "Скоро тут будут настройки!", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onAboutAppMenuClick(MenuItem item) {
+        Intent aboutAppIntent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(aboutAppIntent);
     }
 
     @Override
@@ -60,7 +86,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSayKekButton(View view) {
-        Toast.makeText(this, KEK_WORD, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_LONG).show();
+    }
+
+    public void onClickSayKekWithRicardoButton(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        LinearLayout toastContainer = (LinearLayout) toast.getView();
+        toastContainer.setOrientation(LinearLayout.HORIZONTAL);
+//        TODO Понять, почему Toast слишком большой. Возможно, не нужна горизонтальная ориентация
+        ImageView ricardoImageView = new ImageView(getApplicationContext());
+        ricardoImageView.setImageResource(R.drawable.ricardo);
+        toastContainer.addView(ricardoImageView, 1);
+        toast.show();
     }
 
     public void onClickGetOrientationButton(View view) {
@@ -74,12 +112,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClickAboutAppButton(View view) {
-        Intent aboutAppIntent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(aboutAppIntent);
+    public void onClickWorkWithDisplayButton(View view) {
+        Intent workWithDisplayIntent = new Intent(MainActivity.this, WorkWithDisplayActivity.class);
+        startActivity(workWithDisplayIntent);
     }
 
     private void makeOrientationToastText(String orientationType) {
-        Toast.makeText(this, "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
     }
 }

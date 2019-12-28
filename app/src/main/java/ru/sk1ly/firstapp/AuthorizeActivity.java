@@ -28,7 +28,7 @@ public class AuthorizeActivity extends AppCompatActivity {
         Intent answerIntent = new Intent();
         if (mUserFirstName.getText().toString().isEmpty() ||
                 mUserSecondName.getText().toString().isEmpty()) {
-            Toast.makeText(this,
+            Toast.makeText(getApplicationContext(),
                     "Необходимо заполнить два поля! Вы не были авторизованы", Toast.LENGTH_LONG).show();
             setResult(RESULT_CANCELED, answerIntent);
         } else {
