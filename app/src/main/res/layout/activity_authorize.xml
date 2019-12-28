@@ -8,27 +8,29 @@
     android:orientation="vertical"
     tools:context="ru.sk1ly.firstapp.AuthorizeActivity">
 
+<!-- TODO Зарефачить -->
+
     <EditText
-        android:id="@+id/inputFirstUserName"
+        android:id="@+id/input_first_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:ems="10"
+        android:hint="@string/input_first_user_name"
         android:inputType="textPersonName"
-        android:text="@string/inputFirstUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputSecondUserName"
+        android:id="@+id/input_second_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="169dp"
         android:ems="10"
+        android:hint="@string/input_second_user_name"
         android:inputType="textPersonName"
-        android:text="@string/inputSecondUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,10 +39,11 @@
         android:id="@+id/complete_authorize_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
         android:layout_marginTop="253dp"
         android:onClick="onClickAuthorizeCompleteButton"
         android:text="@string/complete_authorize_button_text"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="148dp" />
+        app:layout_constraintStart_toStartOf="@+id/input_second_user_name"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

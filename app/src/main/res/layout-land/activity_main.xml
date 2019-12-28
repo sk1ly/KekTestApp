@@ -51,6 +51,8 @@
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
+    <!-- TODO Сделать две колонки кнопок -->
+
         <Button
             android:id="@+id/authorize_button"
             android:layout_width="match_parent"
