@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#BAC6CA"
+    android:background="@color/baseActivitiesBackground"
     android:orientation="vertical"
     tools:context="ru.sk1ly.firstapp.MainActivity">
 
@@ -85,6 +85,13 @@
             android:layout_height="wrap_content"
             android:onClick="onClickWorkWithDisplayButton"
             android:text="@string/work_with_display_button_text" />
+
+        <Button
+            android:id="@+id/beer_info_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBeerInfoButton"
+            android:text="@string/beer_info_button_text" />
 
     </LinearLayout>
 
