@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class BeerInfoActivity extends Activity {
 
-    private Spinner mBeerGlobalTypeSpinnser;
-    private Spinner mBeerSubtypeSpinnser;
+    private Spinner mBeerGlobalTypeSpinner;
+    private Spinner mBeerSubtypeSpinner;
     private TextView mBeerInfoTextOnPaper;
 
     @Override
@@ -19,11 +19,11 @@ public class BeerInfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beer_info);
 
-        mBeerGlobalTypeSpinnser = findViewById(R.id.beer_global_type_spinner);
-        mBeerSubtypeSpinnser = findViewById(R.id.beer_subtype_spinner);
+        mBeerGlobalTypeSpinner = findViewById(R.id.beer_global_type_spinner);
+        mBeerSubtypeSpinner = findViewById(R.id.beer_subtype_spinner);
         mBeerInfoTextOnPaper = findViewById(R.id.beer_info_text_on_paper);
 
-        mBeerGlobalTypeSpinnser.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mBeerGlobalTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String itemText = (String) ((TextView) selectedItemView).getText();
@@ -36,7 +36,7 @@ public class BeerInfoActivity extends Activity {
                     adapter = ArrayAdapter.createFromResource(getApplicationContext(), R.array.mixed_beer_types, android.R.layout.simple_spinner_item);
                 }
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                mBeerSubtypeSpinnser.setAdapter(adapter);
+                mBeerSubtypeSpinner.setAdapter(adapter);
             }
 
             @Override
@@ -48,8 +48,8 @@ public class BeerInfoActivity extends Activity {
     }
 
     public void onClickShowBeerInfoButton(View view) {
-        String selectedBeerGlobalType = String.valueOf(mBeerGlobalTypeSpinnser.getSelectedItem());
-        String selectedBeerSubtype = String.valueOf(mBeerSubtypeSpinnser.getSelectedItem());
+        String selectedBeerGlobalType = String.valueOf(mBeerGlobalTypeSpinner.getSelectedItem());
+        String selectedBeerSubtype = String.valueOf(mBeerSubtypeSpinner.getSelectedItem());
         if (selectedBeerGlobalType.equals("Эль")) {
             setAleBeerInfo(selectedBeerSubtype);
         } else if (selectedBeerGlobalType.equals("Лагер")) {
