@@ -41,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/default_second_user_name" />
+
     </LinearLayout>
 
     <LinearLayout

@@ -10,7 +10,9 @@
         android:id="@+id/text_for_beer_global_type_spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:text="@string/text_for_beer_global_type_spinner" />
 
@@ -22,7 +24,7 @@
         android:layout_alignEnd="@+id/beer_subtype_spinner"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/text_for_beer_global_type_spinner"
-        android:entries="@array/global_beer_types"/>
+        android:entries="@array/global_beer_types" />
 
     <TextView
         android:id="@+id/text_for_beer_subtype_spinner"
@@ -43,11 +45,20 @@
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/text_for_beer_subtype_spinner" />
 
+    <Button
+        android:id="@+id/show_beer_info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_for_beer_subtype_spinner"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickShowBeerInfoButton"
+        android:text="@string/show_beer_info_button_text" />
+
     <ImageView
         android:id="@+id/beer_info_paper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/text_for_beer_subtype_spinner"
+        android:layout_below="@+id/show_beer_info_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
@@ -55,13 +66,14 @@
 
     <TextView
         android:id="@+id/beer_info_text_on_paper"
-        android:textStyle="italic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/beer_info_paper"
         android:layout_alignStart="@id/beer_info_paper"
+        android:layout_alignTop="@id/beer_info_paper"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="40dp"
-        android:text="@string/default_beer_info_text_on_paper"/>
+        android:layout_marginEnd="40dp"
+        android:text="@string/default_beer_info_text_on_paper"
+        android:textStyle="italic" />
 
 </RelativeLayout>
