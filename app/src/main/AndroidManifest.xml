@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.sk1ly.firstapp">
 
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_first_app"
@@ -10,25 +14,24 @@
         android:roundIcon="@mipmap/ic_launcher_round_first_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="ru.sk1ly.firstapp.MainActivity">
+        <activity android:name=".BeerInfoActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="ru.sk1ly.firstapp.AuthorizeActivity"
+            android:name=".AuthorizeActivity"
             android:label="@string/activity_authorize_label" />
         <activity
-            android:name="ru.sk1ly.firstapp.AboutActivity"
+            android:name=".AboutActivity"
             android:label="@string/activity_about_label"
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
-            android:name="ru.sk1ly.firstapp.WorkWithDisplayActivity"
+            android:name=".WorkWithDisplayActivity"
             android:label="@string/activity_work_with_display_label" />
     </application>
-
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>
 
 </manifest>

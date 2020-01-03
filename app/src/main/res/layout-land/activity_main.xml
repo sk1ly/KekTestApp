@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#BAC6CA"
+    android:background="@color/baseActivitiesBackground"
     android:orientation="vertical"
     tools:context="ru.sk1ly.firstapp.MainActivity">
 
@@ -41,53 +41,79 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/default_second_user_name" />
+
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_views_on_top"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
+        android:layout_centerHorizontal="true">
 
-    <!-- TODO Сделать две колонки кнопок -->
-
-        <Button
-            android:id="@+id/authorize_button"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/first_column_land_main_activity"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickAuthorizeButton"
-            android:text="@string/authorize_button_text" />
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/say_kek_button"
-            android:layout_width="match_parent"
+            <Button
+                android:id="@+id/authorize_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickAuthorizeButton"
+                android:text="@string/authorize_button_text" />
+
+            <Button
+                android:id="@+id/say_kek_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSayKekButton"
+                android:text="@string/say_kek_button_text" />
+
+            <Button
+                android:id="@+id/say_kek_with_ricardo_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSayKekWithRicardoButton"
+                android:text="@string/say_kek_with_ricardo_button_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_column_land_main_activity"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickSayKekButton"
-            android:text="@string/say_kek_button_text" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/first_column_land_main_activity"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/say_kek_with_ricardo_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickSayKekWithRicardoButton"
-            android:text="@string/say_kek_with_ricardo_button_text" />
+            <!-- TODO Подумать как сделать так, чтобы кнопки в обоих столбцах были одинакового размера -->
 
-        <Button
-            android:id="@+id/get_orientation_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickGetOrientationButton"
-            android:text="@string/get_orientation_button_text" />
+            <Button
+                android:id="@+id/get_orientation_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickGetOrientationButton"
+                android:text="@string/get_orientation_button_text" />
 
-        <Button
-            android:id="@+id/work_with_display_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickWorkWithDisplayButton"
-            android:text="@string/work_with_display_button_text" />
+            <Button
+                android:id="@+id/work_with_display_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickWorkWithDisplayButton"
+                android:text="@string/work_with_display_button_text" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/beer_info_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBeerInfoButton"
+                android:text="@string/beer_info_button_text" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

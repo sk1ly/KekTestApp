@@ -117,6 +117,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(workWithDisplayIntent);
     }
 
+    public void onClickBeerInfoButton(View view) {
+        Intent beerInfoIntent = new Intent(MainActivity.this, BeerInfoActivity.class);
+        startActivity(beerInfoIntent);
+    }
+
     private void makeOrientationToastText(String orientationType) {
         Toast.makeText(getApplicationContext(), "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
     }
