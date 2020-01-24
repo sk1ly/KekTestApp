@@ -14,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round_first_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BeerInfoActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +31,12 @@
         <activity
             android:name=".WorkWithDisplayActivity"
             android:label="@string/activity_work_with_display_label" />
+        <activity
+            android:name=".BeerInfoActivity"
+            android:label="@string/activity_beer_info_label" />
+        <activity
+            android:name=".StopwatchActivity"
+            android:label="@string/activity_stopwatch_label" />
     </application>
 
 </manifest>

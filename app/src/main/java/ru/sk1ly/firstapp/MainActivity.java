@@ -122,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(beerInfoIntent);
     }
 
+    public void onClickStopwatchButton(View view) {
+        Intent stopwatchIntent = new Intent(MainActivity.this, StopwatchActivity.class);
+        startActivity(stopwatchIntent);
+    }
+
     private void makeOrientationToastText(String orientationType) {
         Toast.makeText(getApplicationContext(), "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
     }
