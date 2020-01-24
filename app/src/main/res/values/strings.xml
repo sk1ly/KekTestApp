@@ -5,12 +5,15 @@
     <string name="activity_authorize_label">Авторизация</string>
     <string name="activity_about_label">О приложении</string>
     <string name="activity_work_with_display_label">Работа с экраном</string>
+    <string name="activity_beer_info_label">О пиве</string>
+    <string name="activity_stopwatch_label">Секундомер</string>
     <string name="authorize_button_text">Авторизоваться</string>
     <string name="say_kek_button_text">Сказать Кек</string>
     <string name="say_kek_with_ricardo_button_text">Сказать Кек и показать Рикардо</string>
     <string name="get_orientation_button_text">Узнать ориентацию</string>
     <string name="work_with_display_button_text">Поработать с экраном</string>
     <string name="beer_info_button_text">Узнать о пиве</string>
+    <string name="stopwatch_button_text">Секундомер</string>
     <string name="hello_before_user_name">Здравствуй,</string>
     <string name="default_first_user_name">Неизвестный</string>
     <string name="default_second_user_name">пользователь</string>
@@ -244,4 +247,7 @@
         (29 сентября) и до дня Св. Георгия (23 апреля). Таким образом, «мартовское» было последним пивом, изготовленным за сезон. После него
         полагалось соблюдать многомесячную паузу. Ёмкости для варки напитка на это время опечатывались представителями властей.
     </string>
+    <string name="start_stopwatch_button_text">Запустить</string>
+    <string name="stop_stopwatch_button_text">Остановить</string>
+    <string name="refresh_stopwatch_button_text">Сбросить</string>
 </resources>

@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -90,14 +92,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSayKekWithRicardoButton(View view) {
-        Toast toast = Toast.makeText(getApplicationContext(), KEK_WORD, Toast.LENGTH_LONG);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        LinearLayout toastContainer = (LinearLayout) toast.getView();
-        toastContainer.setOrientation(LinearLayout.HORIZONTAL);
-//        TODO Понять, почему Toast слишком большой. Возможно, не нужна горизонтальная ориентация
-        ImageView ricardoImageView = new ImageView(getApplicationContext());
-        ricardoImageView.setImageResource(R.drawable.ricardo);
-        toastContainer.addView(ricardoImageView, 1);
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.ricardo_with_kek_toast,
+                (ViewGroup) findViewById(R.id.ricardo_with_kek_toast_container));
+
+        TextView text = layout.findViewById(R.id.kek_word);
+        text.setText(KEK_WORD);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
         toast.show();
     }
 
@@ -120,6 +125,11 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBeerInfoButton(View view) {
         Intent beerInfoIntent = new Intent(MainActivity.this, BeerInfoActivity.class);
         startActivity(beerInfoIntent);
+    }
+
+    public void onClickStopwatchButton(View view) {
+        Intent stopwatchIntent = new Intent(MainActivity.this, StopwatchActivity.class);
+        startActivity(stopwatchIntent);
     }
 
     private void makeOrientationToastText(String orientationType) {

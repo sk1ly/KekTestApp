@@ -94,6 +94,13 @@
             android:onClick="onClickBeerInfoButton"
             android:text="@string/beer_info_button_text" />
 
+        <Button
+            android:id="@+id/stopwatch_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickStopwatchButton"
+            android:text="@string/stopwatch_button_text" />
+
     </LinearLayout>
 
 </RelativeLayout>
