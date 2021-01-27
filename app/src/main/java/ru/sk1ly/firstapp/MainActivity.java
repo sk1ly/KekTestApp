@@ -132,6 +132,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(stopwatchIntent);
     }
 
+    public void onClickBerserkCardsInfoButton(View view) {
+        Intent berserkCardsMainIntent = new Intent(MainActivity.this, BerserkCardsInfoMainActivity.class);
+        startActivity(berserkCardsMainIntent);
+    }
+
     private void makeOrientationToastText(String orientationType) {
         Toast.makeText(getApplicationContext(), "В данный момент " + orientationType + " ориентация", Toast.LENGTH_LONG).show();
     }

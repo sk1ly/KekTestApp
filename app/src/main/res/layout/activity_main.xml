@@ -101,6 +101,13 @@
             android:onClick="onClickStopwatchButton"
             android:text="@string/stopwatch_button_text" />
 
+        <Button
+            android:id="@+id/berserk_cards_info_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBerserkCardsInfoButton"
+            android:text="@string/berserk_cards_info_button_text" />
+
     </LinearLayout>
 
 </RelativeLayout>
