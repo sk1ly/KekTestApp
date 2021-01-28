@@ -10,12 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Фрагмент, с подробным описанием карты.
+ * Будет находиться в {@link BerserkCardsInfoDetailActivity}, если приложение запущено на устройстве
+ * с небольшим размером экрана. В случае, если приложение было запущена на устройстве с большим
+ * размером экрана (напр. планшет), то данный фрагмент будет находиться в {@link BerserkCardsInfoMainActivity}.
+ */
 public class BerserkCardsInfoDetailFragment extends Fragment {
 
     private long cardId;
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             cardId = savedInstanceState.getLong("cardId");
@@ -40,7 +46,6 @@ public class BerserkCardsInfoDetailFragment extends Fragment {
             cost.setText(getString(R.string.berserk_card_cost_text, berserkCard.getCost()));
             ImageView image = (ImageView) view.findViewById(R.id.berserk_cards_info_detail_image);
             image.setImageResource(berserkCard.getImageResourceId());
-//            TODO Сделать одинакового размера все картинки, отцентровать?, добавить во все Berserk классы javadoc
         }
     }
 

@@ -11,7 +11,7 @@ import android.widget.ListView;
 import androidx.fragment.app.ListFragment;
 
 /**
- * Инкапсулирует фрагмент со списком карт.
+ * Фрагмент со списком карт.
  * Объявляет интерфейс слушателя с методом, который будет вызываться, если выбран один из элементов списка.
  */
 public class BerserkCardsInfoListFragment extends ListFragment {

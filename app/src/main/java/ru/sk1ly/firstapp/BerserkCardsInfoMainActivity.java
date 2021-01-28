@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * Активность со списком карт
+ */
 public class BerserkCardsInfoMainActivity extends AppCompatActivity implements BerserkCardsInfoListFragment.Listener {
 
     @Override

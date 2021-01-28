@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+/**
+ * Активность с подробным описанием карты.
+ * Если приложение запущено на планшете, то активность не используется.
+ */
 public class BerserkCardsInfoDetailActivity extends AppCompatActivity {
 
     @Override

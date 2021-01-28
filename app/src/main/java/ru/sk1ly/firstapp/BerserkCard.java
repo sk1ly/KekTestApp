@@ -14,9 +14,9 @@ public class BerserkCard {
             new BerserkCard("Акванит", 3, R.drawable.berserk_card_3)
     };
 
-    private String name;
-    private int cost;
-    private int imageResourceId;
+    private final String name;
+    private final int cost;
+    private final int imageResourceId;
 
     public BerserkCard(String name, int cost, int imageResourceId) {
         this.name = name;
@@ -28,16 +28,8 @@ public class BerserkCard {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getCost() {
         return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
     }
 
     public int getImageResourceId() {
