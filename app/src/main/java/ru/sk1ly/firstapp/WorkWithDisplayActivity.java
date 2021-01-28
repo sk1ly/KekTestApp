@@ -88,9 +88,6 @@ public class WorkWithDisplayActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (!Settings.System.canWrite(getApplicationContext())) {
-                        Toast.makeText(getApplicationContext(),
-                                "Права на изменение системных настроек отсутствуют!",
-                                Toast.LENGTH_SHORT).show();
                         mBrightnessSeekBar.setProgress(mCurrentBrightnessPercentage);
                     } else {
                         setNewBrightnessValuesAndUpdateSystemBrightness(progress);
@@ -105,6 +102,9 @@ public class WorkWithDisplayActivity extends AppCompatActivity {
             public void onStartTrackingTouch(SeekBar seekBar) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (!Settings.System.canWrite(getApplicationContext())) {
+                        Toast.makeText(getApplicationContext(),
+                                "Права на изменение системных настроек отсутствуют!",
+                                Toast.LENGTH_SHORT).show();
                         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(WorkWithDisplayActivity.this)
                                 .setTitle("Отсутствуют права")
                                 .setMessage("Необходимо выдать права на изменение системных настроек.\n" +

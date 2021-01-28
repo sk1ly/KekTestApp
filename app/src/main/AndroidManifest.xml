@@ -37,6 +37,12 @@
         <activity
             android:name=".StopwatchActivity"
             android:label="@string/activity_stopwatch_label" />
+        <activity
+            android:name=".BerserkCardsInfoMainActivity"
+            android:label="@string/activity_berserk_cards_info_label" />
+        <activity
+            android:name=".BerserkCardsInfoDetailActivity"
+            android:label="@string/activity_berserk_cards_info_label" />
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@
     <string name="activity_work_with_display_label">Работа с экраном</string>
     <string name="activity_beer_info_label">О пиве</string>
     <string name="activity_stopwatch_label">Секундомер</string>
+    <string name="activity_berserk_cards_info_label">Карты из настолки \"Берсерк\"</string>
     <string name="authorize_button_text">Авторизоваться</string>
     <string name="say_kek_button_text">Сказать Кек</string>
     <string name="say_kek_with_ricardo_button_text">Сказать Кек и показать Рикардо</string>
@@ -14,6 +15,7 @@
     <string name="work_with_display_button_text">Поработать с экраном</string>
     <string name="beer_info_button_text">Узнать о пиве</string>
     <string name="stopwatch_button_text">Секундомер</string>
+    <string name="berserk_cards_info_button_text">Посмотреть карты из настолки \"Берсерк\"</string>
     <string name="hello_before_user_name">Здравствуй,</string>
     <string name="default_first_user_name">Неизвестный</string>
     <string name="default_second_user_name">пользователь</string>
@@ -21,6 +23,7 @@
     <string name="input_second_user_name">Ваша фамилия</string>
     <string name="complete_authorize_button_text">Готово</string>
     <string name="about_app_text">Версия приложения %1$s. По всем вопросам обращаться на <b>io.skvortsov@mail.ru</b></string>
+    <string name="berserk_card_cost_text">Стоимость: %1$d</string>
     <string name="action_authorize">Авторизоваться</string>
     <string name="action_settings">Настройки</string>
     <string name="action_about_app">О приложении</string>
